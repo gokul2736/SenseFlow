@@ -1,6 +1,6 @@
 # SenseFlow: Phishing & Social Engineering Detector
 
-**TLead:** Markandeyan Gokul
+**TLead:** Markandeyan Gokul  
 **TMemb:** Kanamarlapudi Sai Charithanjali 
 
 ## 📌 Problem Statement
