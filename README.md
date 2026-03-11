@@ -20,3 +20,62 @@ Traditional antivirus systems use signature-based detection, which fails against
 
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d709223e-6332-41d6-94db-ca39de2df32e" />
+
+
+
+
+## Pipeline
+              +----------------------+
+              |   Email Input        |
+              | (User Email Text)    |
+              +----------+-----------+
+                         |
+                         v
+              +----------------------+
+              |   Text Preprocessing |
+              | remove html, urls,   |
+              | lowercase, cleaning  |
+              +----------+-----------+
+                         |
+                         v
+              +----------------------+
+              |     Tokenization     |
+              |  RoBERTa Tokenizer   |
+              +----------+-----------+
+                         |
+                         v
+              +----------------------+
+              |   Transformer Model  |
+              | DistilBERT / RoBERTa |
+              |     / DeBERTa        |
+              +----------+-----------+
+                         |
+                         v
+              +----------------------+
+              |   Phishing Detector  |
+              |  Safe vs Phishing    |
+              | Probability Score    |
+              +----------+-----------+
+                         |
+                (If phishing detected)
+                         |
+                         v
+              +----------------------+
+              |   LLM Reasoning      |
+              |      Llama 3.1       |
+              | Detect manipulation  |
+              +----------+-----------+
+                         |
+                         v
+              +----------------------+
+              |   Explainable Output |
+              | Urgency / Authority  |
+              | Financial request    |
+              +----------+-----------+
+                         |
+                         v
+              +----------------------+
+              |  User Interface      |
+              | Web App / Extension  |
+              | Warning Message      |
+              +----------------------+
