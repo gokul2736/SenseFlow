@@ -12,17 +12,35 @@ Traditional antivirus systems use signature-based detection, which fails against
 * **Frontend:** Streamlit
 * **Backend:** PyTorch & Python 3.9+
 
-## 📂 Project Structure
-* `data/`: Raw and processed datasets (Ignored by Git).
-* `src/`: Production-grade source code.
-* `notebooks/`: Experimental labs for model training.
-* `docs/logs/`: Weekly trial & error logs for PBL review.
-
-
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d709223e-6332-41d6-94db-ca39de2df32e" />
-
-
-
+##  Project Structure
+```
+SenseFlow/
+│
+├── data/
+│   ├── raw/                  # Original datasets
+│   └── processed/            # Cleaned datasets
+│
+├── models/                   # Trained transformer models
+│   ├── distilbert/
+│   ├── roberta/
+│   └── deberta/
+│
+├── notebooks/                # Training notebooks
+│   ├── DISTILBERT.ipynb
+│   ├── ROBERTA.ipynb
+│   ├── DEBERTA.ipynb
+│
+├── src/                      # Application source code
+│   ├── app.py
+│   ├── model_utils.py
+│   ├── preprocessing.py
+│   └── benchmark.py
+│
+├── docs/                     # Project documentation
+│
+├── README.md
+└── requirements.txt
+```
 
 ## Pipeline
               +----------------------+
